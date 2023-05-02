@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Major Cineplex</title>
+		<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+		<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+	</head>
+	<body>
+		<div id="map" style="height: 600px"></div>
+		<script>
+			var map = L.map('map').setView([13.7563, 100.5018], 10);
+			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+			
+			var siamIcon = L.icon({
+			iconUrl: 'Siam.png',
+			iconSize:     [90, 55], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.746838049469012, 100.53466430222913], {icon: siamIcon}).addTo(map).bindPopup("<b>Siam Paragon</b>");
+
+			var pinIcon = L.icon({
+			iconUrl: 'Pinklao.png',
+			iconSize:     [80, 60], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.777734335920725, 100.47588575021462], {icon: pinIcon}).addTo(map).bindPopup("<b>Central Pinklao</b>");
+
+			var bangIcon = L.icon({
+			iconUrl: 'Gate.png',
+			iconSize:     [100, 65], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.805469967692353, 100.52378021400067], {icon: bangIcon}).addTo(map).bindPopup("<b>Gateway at Bangsue</b>");
+
+			var esIcon = L.icon({
+			iconUrl: 'Espla.png',
+			iconSize:     [80, 50], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.766725021574972, 100.56967825635957], {icon: esIcon}).addTo(map).bindPopup("<b>Esplande Ratchada</b>");
+
+			var iconIcon = L.icon({
+			iconUrl: 'Ic.png',
+			iconSize:     [140, 25], // size of the icon
+			iconAnchor:   [45, 45], // point of the icon which will correspond to marker's location
+			popupAnchor:  [0, -39] // point from which the popup should open relative to the iconAnchor		
+			});
+
+			L.marker([13.72674328307931, 100.5102368711818], {icon: iconIcon}).addTo(map).bindPopup("<b>ICONSIAM</b>");
+		</script>
+	</body>
+</html>
